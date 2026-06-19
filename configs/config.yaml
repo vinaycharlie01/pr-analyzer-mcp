@@ -1,0 +1,33 @@
+server:
+  port: 8080
+  host: "localhost"
+  mode: "stdio"  # stdio or http
+
+bitbucket:
+  base_url: "https://api.bitbucket.org/2.0"
+  datacenter_url: "https://bitbucket.example.com"
+  token: "${BITBUCKET_TOKEN}"
+  username: "${BITBUCKET_USERNAME}"
+  app_password: "${BITBUCKET_APP_PASSWORD}"
+
+github:
+  token: "${GITHUB_TOKEN}"
+  base_url: "https://api.github.com"
+
+logging:
+  level: "info"
+  format: "json"
+  output: "stdout"
+
+analysis:
+  architecture: true
+  dependency_analysis: true
+  migration_analysis: true
+  max_depth: 10
+  timeout_seconds: 30
+
+observability:
+  enabled: true
+  service_name: "pr-analyzer-mcp"
+  trace_endpoint: ""
+  metric_endpoint: ""
